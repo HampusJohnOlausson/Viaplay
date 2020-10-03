@@ -1,2 +1,2 @@
 # Viaplay
- A collaboration attempt of trying to design Viaplay´s start page from scratch.
+ A collaboration with Andreas Stanggren, where we attempt to design Viaplay´s start page from scratch.
