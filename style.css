@@ -1,0 +1,353 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Header start*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 4rem;
+  background-color: #1d1d27;
+}
+li {
+  list-style: none;
+}
+.logo {
+  width: 9em;
+  padding: 15px 10px 15px 70px;
+}
+.logo img {
+  width: 9em;
+}
+.log-in-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 70px 0px 0px;
+}
+a {
+  color: #ededf0;
+  text-decoration: none;
+  padding: 20px 5px 0px 5px;
+}
+.log-in-container a:nth-child(2) i {
+  margin-bottom: 5px;
+}
+
+/* Main / Hero start*/
+
+main {
+  color: #ededf0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+h1 {
+  position: relative;
+  z-index: 100;
+  padding-top: 25rem;
+  font-size: 4rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.hero,
+h1,
+.hero-text,
+.btns {
+  padding-top: 11rem;
+}
+.hero-text {
+  position: relative;
+  z-index: 100;
+  padding-top: 13px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.box-shadow {
+  position: relative;
+  text-align: center;
+}
+.box-shadow::after {
+  box-shadow: inset 0 -350px 100px -10px #000;
+  bottom: 0;
+  content: "";
+  left: 0;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+.hero {
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 85vh;
+  background-image: url("./images/Partisan.jpeg");
+}
+.btns {
+  z-index: 2;
+  padding-top: 4rem;
+  padding-right: 10rem;
+  padding-left: 10rem;
+}
+.button-container {
+  padding: 0 1.4rem 0 1.4rem;
+}
+.button-container button:hover {
+  background-color: #46b04c;
+  cursor: pointer;
+}
+.button-container,
+p {
+  z-index: 100;
+  color: #ededf0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  list-style: none;
+  outline: none;
+}
+.buttton-container,
+button {
+  z-index: 100;
+  background-color: #65cc66;
+  color: #ededf0;
+  border-radius: 55px;
+  list-style: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  width: 15.6rem;
+  height: 3.4rem;
+}
+.news-tag {
+  position: absolute;
+  display: inline-block;
+  background: #d9000b;
+  border-radius: 5px;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px 5px 5px 5px;
+  margin: -48px 0px 0px 200px;
+}
+
+/* Lower hero */
+
+.lower-hero {
+  background-color: #edeef0;
+}
+.circles {
+  padding-right: 10rem;
+  padding-left: 10rem;
+  padding-top: 4rem;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+}
+h4 {
+  font-size: 1.2rem;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+  color: #202e31;
+  padding: 1rem 0rem;
+}
+.under-circle {
+  color: #5d6265;
+  font-size: 0.9rem;
+  text-shadow: none;
+}
+.circle-pic {
+  width: 10rem;
+  border-radius: 100%;
+}
+.circle-container {
+  width: 25rem;
+  height: 20rem;
+}
+
+/*  Footer start */
+
+.film-section {
+  padding: 0rem 3rem;
+  text-align: center;
+}
+.filmText {
+  font-weight: 350;
+  font-size: 1.7rem;
+}
+.films-row-1 li img {
+  padding: 0.6rem;
+  padding-bottom: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+.films-row-2 li img {
+  width: 19.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 1500px) {
+  .hero,
+  h1,
+  .hero-text,
+  .btns {
+    padding-top: 2rem;
+  }
+  h1 {
+    padding-top: 15rem;
+  }
+  .btns {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 1366px) {
+  .hero {
+    height: 95%;
+    background-color: #000000;
+  }
+  .films li:last-child {
+    display: none;
+  }
+}
+@media (max-width: 1240px) {
+  .circle-pic {
+    width: 8rem;
+  }
+  .under-circle {
+    font-size: 0.8em;
+    width: 18rem;
+    padding: 0 1rem 0 1rem;
+  }
+  /* Select specific elements from films list to NOT display */
+  .films li:nth-last-child(2) {
+    display: none;
+  }
+  .films-row-1 li:nth-last-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    background-image: url("./images/Partisan.jpeg");
+    background-size: contain;
+  }
+}
+@media (max-width: 1000px) {
+  .log-in-container {
+    padding-right: 1rem;
+  }
+  .log-in-container a i {
+    display: none;
+  }
+  .box-shadow::after {
+    box-shadow: inset 0 -350px 100px -10px #000;
+  }
+  .hero {
+    background-image: url("./images/Partisan-mobil.jpg");
+    background-size: contain;
+  }
+  .btns {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+    padding-top: 2rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    padding-top: 20rem;
+  }
+  .hero-text {
+    font-size: 1rem;
+  }
+  .logo img {
+    position: absolute;
+    left: 40%;
+  }
+  .film-section {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+  }
+  .film-section h4 {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  /* Sets the films in rows of 3 */
+  .films-row-1,
+  .films-row-2 {
+    flex-wrap: wrap;
+  }
+  /* Keeps the films in rows of 3 with a dynamic width */
+  .films-row-1 li img {
+    width: 25vw;
+    padding-bottom: 0.5rem;
+  }
+  .films-row-2 li img {
+    width: 38vw;
+    padding-bottom: 0.5rem;
+  }
+  .films li:nth-last-child(1),
+  .films-row-1 li:nth-last-child(2) {
+    display: block;
+  }
+}
+@media (max-width: 860px) {
+  /* Incrementing the vertical off-set of the box shadow to fit the background image */
+  .box-shadow::after {
+    box-shadow: inset 0 -550px 100px -10px #000;
+  }
+  .hero-text {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .btns {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .lower-hero {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    margin-top: 0.2rem;
+    width: 6em;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+    padding-top: 14rem;
+  }
+  .box-shadow::after {
+    box-shadow: inset 0 -650px 100px -10px #000;
+  }
+}

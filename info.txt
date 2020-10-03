@@ -1,0 +1,30 @@
+- https://viaplay.se/
+
+- Hampus Olausson & Andreas Stanggren
+
+- Bakgrund:
+- Vi valde att återskapa Viaplays hemsida för vi såg en tydlig struktur av header, main och footer.
+- Originalhemsidan har en märkbar responsivitet, där en stor del av hemsidan förändras under flera olika segment.
+- Det såg vi som en rolig utmaning att försöka återskapa i så god utsträckning som möjligt.
+
+- Avgränsing:
+- Tidigt märkte vi att originialhemsidan använde sig av en lågupplöst bild i heron. 
+- Troligen var det ett medvetet designval för att låta bilden hålla sig centrerad och således responsiv. 
+- Vi valde istället att använda en högupplöst bild i heron (background-size: cover) och göra ett bildbyte (background image)
+- när bilden slutade hålla sig centrerad. Resultatet blev i våra ögon lyckat. 
+- 
+- Vi använde oss av en box-shadow för att få till en svart fade på heron.
+- Genom media queries ökar box-shadow vertikala off-set, men leder till trubbiga övergångar. 
+- Vi kom på två alternativa lösningar men som vi inte implementerade:
+- 1. Göra en egen skuggeffekt i något externt program (tex. Photoshop)
+- 2. Om vi skulle använt Sass istället för vanilla CSS skulle vi kunna skapa en variabel för 
+- vertikal off-set som i en funktion ökar i takt med responsiviteten och således skapa
+- mindre trubbiga övergångar. Hade även krävt färre media queries. Möjligtvis hade detta kunnat
+- lösas utan Sass och med enbart CSS och JavaScript.
+-
+- Film sektionen i footern var en av de svårare delarna att implementera responsivitet. 
+- Då listorna ändras både i storlek samt hur många filmer som ska visas per rad vid olika media queries
+- skapade det en komplex struktur. Vid ett tillfälle behövdes flex-wrap: wrap; användas för att få till en
+- korrekt radindelning. Dock skulle även då bildernas storlek dynamiskt minska utan att öka antalet filmer per rad. 
+- Då sattes en vw (view width) på img för att dynamiskt styra storleken men resulterade tyvärr i att storleken av 
+- filmerna (img) är något mindre än originalhemsidan i mobilformat. 
